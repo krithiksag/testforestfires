@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    {% if result is not none %}
+        <h2>The FWI prediction result is: {{ result }}</h2>
+    {% else %}
+        <h2>No prediction made yet. Please submit the form.</h2>
+    {% endif %}
+    <a href="{{ url_for('hello_world') }}">Go Back</a>
+</body>
+</html>
